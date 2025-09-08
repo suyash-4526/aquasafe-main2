@@ -2,7 +2,7 @@ import { Heart } from 'lucide-react';
 
 export default function Footer() {
   const teamMembers = ['Suyash Chavan', 'Sumeet Bangar', 'Vaishnav Babar', 'Yash Dighe', "Om Jadhav"];
-  const mentorName = 'Prof. Pallavi Thorat Mam';
+ 
 
   return (
     <footer className="w-full border-t bg-card text-foreground shadow-sm mt-auto">
@@ -17,11 +17,7 @@ export default function Footer() {
               <span className="font-semibold text-sm text-foreground">Team:</span> {teamMembers.join(', ')}
             </p>
 
-            {/* Mentor */}
-            <p className="text-xs text-muted-foreground">
-              <span className="font-semibold text-sm text-foreground">Guided By:</span> {mentorName}
-            </p>
-
+          
           </div>
           
           <div className="flex items-center justify-center text-sm text-muted-foreground whitespace-nowrap">
