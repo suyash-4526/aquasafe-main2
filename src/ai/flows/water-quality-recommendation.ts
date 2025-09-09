@@ -33,7 +33,7 @@ const prompt = ai.definePrompt({
   input: {schema: WaterQualityRecommendationInputSchema},
   output: {schema: WaterQualityRecommendationOutputSchema},
   model: googleAI.model('gemini-2.0-flash'),
-  prompt: `You are a water quality expert. A water sample from a home in Pimpri-Chinchwad, India shows a lead level of {{leadLevel}} mg/L and an arsenic level of {{arsenicLevel}} mg/L. This results in a Hazard Index of {{hazardIndex}}. Based on these specific values, provide a concise, actionable recommendation for the resident. Start with a clear one-sentence summary of the risk level. Then, suggest the most appropriate type of water filter (e.g., RO, Activated Carbon) and explain why in one sentence. Finally, list 2-3 simple, immediate safety tips.and also give what health disseases may it can cause . Format the output as simple HTML paragraphs.`,
+  prompt: `First greet the user with welcome , You are a water quality expert. A water sample from a home in Pimpri-Chinchwad, India shows a lead level of {{leadLevel}} mg/L and an arsenic level of {{arsenicLevel}} mg/L. This results in a Hazard Index of {{hazardIndex}}. Based on these specific values, provide a concise, actionable recommendation for the resident. Start with a clear one-sentence summary of the risk level. Then, suggest the most appropriate type of water filter (e.g., RO, Activated Carbon) and explain why in one sentence. Finally, list 2-3 simple, immediate safety tips.and also give what health disseases may it can cause . Format the output as simple HTML paragraphs.`,
 });
 
 const waterQualityRecommendationFlow = ai.defineFlow(
